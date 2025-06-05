@@ -41,6 +41,11 @@ namespace MiSalud.Roles.Admin
             AbrirFormulario(new MiSalud.Roles.Admin.Personal.FormGestionPersonal());
         }
 
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new Usuarios.FormGestionUsuarios());
+        }
+
         private void btnEspecialidades_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new Especialidades.FormGestionEspecialidades());
@@ -79,6 +84,11 @@ namespace MiSalud.Roles.Admin
         private void btnReportes_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new Reportes.FormReportes());
+        }
+
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new Auditoria.FormAuditoria());
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)

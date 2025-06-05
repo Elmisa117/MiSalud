@@ -9,9 +9,12 @@ namespace Login
 {
     public class SelectorRoles
     {
+        public static string UsuarioActual { get; private set; }
+
         // Método estático que abre el formulario correspondiente según el rol
         public static void AbrirMenuPorRol(string rol, string usuario)
         {
+            UsuarioActual = usuario;
             Form formRol = null;
 
             switch (rol)

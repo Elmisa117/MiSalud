@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MiSalud.Datos; // Asegúrate de que este namespace exista y tenga ClinicaContext
 using Login;         // Aquí está SelectorRoles
+using MiSalud.Utilidades;
 
 namespace Login
 {
@@ -31,9 +32,11 @@ namespace Login
             string user = txtUsuario.Text.Trim();
             string pass = txtContrasena.Text.Trim();
 
+            string hash = Seguridad.HashPassword(pass);
+
             // Consulta LINQ para validar credenciales
             var login = _context.Personal
-                .FirstOrDefault(p => p.Usuario == user && p.Contrasena == pass && p.Estado == true);
+                .FirstOrDefault(p => p.Usuario == user && p.Contrasena == hash && p.Estado == true);
 
             if (login != null)
             {
