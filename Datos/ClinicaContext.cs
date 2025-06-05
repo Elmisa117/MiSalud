@@ -25,6 +25,7 @@ namespace MiSalud.Datos
         public DbSet<Servicio> Servicios { get; set; }
         public DbSet<TipoAlta> TiposAlta { get; set; }
         public DbSet<TipoHabitacion> TiposHabitacion { get; set; }
+        public DbSet<Auditoria> Auditoria { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -29,3 +29,15 @@ Use the .NET SDK (8.0 or later) to build the project:
 
 Execute the compiled application or run through `dotnet run`. Ensure PostgreSQL is reachable using the configured connection string.
 
+## Modules
+
+Administrators have access to several modules:
+
+- Gestión de Personal
+- Especialidades médicas
+- Servicios médicos
+- Consultas y hospitalizaciones
+- Facturación y planes de pago
+- Fichas clínicas y reportes
+- Configuración y **Auditoría** para revisar acciones registradas
+

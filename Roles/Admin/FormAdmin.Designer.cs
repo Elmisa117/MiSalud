@@ -51,17 +51,17 @@ namespace MiSalud.Roles.Admin
             // 
             string[] nombres = {
                 "btnPersonal", "btnUsuarios", "btnEspecialidades", "btnServicios", "btnConsultas", "btnHospitalizaciones",
-                "btnFacturacion", "btnPlanesPago", "btnFichasClinicas", "btnReportes", "btnConfiguracion", "btnCerrarSesion"
+                "btnFacturacion", "btnPlanesPago", "btnFichasClinicas", "btnReportes", "btnAuditoria", "btnConfiguracion", "btnCerrarSesion"
             };
 
             string[] textos = {
                 "Gestión Personal", "Usuarios", "Especialidades", "Servicios", "Consultas", "Hospitalizaciones",
-                "Facturación", "Planes de Pago", "Fichas Clínicas", "Reportes", "Configuración", "Cerrar Sesión"
+                "Facturación", "Planes de Pago", "Fichas Clínicas", "Reportes", "Auditoría", "Configuración", "Cerrar Sesión"
             };
 
             EventHandler[] eventos = {
                 btnPersonal_Click, btnUsuarios_Click, btnEspecialidades_Click, btnServicios_Click, btnConsultas_Click, btnHospitalizaciones_Click,
-                btnFacturacion_Click, btnPlanesPago_Click, btnFichasClinicas_Click, btnReportes_Click, btnConfiguracion_Click, btnCerrarSesion_Click
+                btnFacturacion_Click, btnPlanesPago_Click, btnFichasClinicas_Click, btnReportes_Click, btnAuditoria_Click, btnConfiguracion_Click, btnCerrarSesion_Click
             };
 
             System.Windows.Forms.Button[] referencias = new System.Windows.Forms.Button[nombres.Length];

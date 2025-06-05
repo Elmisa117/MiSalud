@@ -86,6 +86,11 @@ namespace MiSalud.Roles.Admin
             AbrirFormulario(new Reportes.FormReportes());
         }
 
+        private void btnAuditoria_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(new Auditoria.FormAuditoria());
+        }
+
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             AbrirFormulario(new Configuracion.FormConfiguracionSistema());

@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using MiSalud.Datos;
+using MiSalud.Utilidades;
 using Entidades = MiSalud.Entidades;
 
 namespace MiSalud.Roles.Admin.Servicios
@@ -88,6 +89,7 @@ namespace MiSalud.Roles.Admin.Servicios
                     };
                     ctx.Servicios.Add(s);
                     ctx.SaveChanges();
+                    Utilidades.AuditoriaLogger.Registrar(Login.SelectorRoles.UsuarioActual, "Servicios", "Crear", $"Servicio {s.Nombre}");
                 }
                 else
                 {
@@ -99,6 +101,7 @@ namespace MiSalud.Roles.Admin.Servicios
                         serv.Costo = numCosto.Value;
                         serv.RequierePrescripcion = chkRequiere.Checked;
                         ctx.SaveChanges();
+                        Utilidades.AuditoriaLogger.Registrar(Login.SelectorRoles.UsuarioActual, "Servicios", "Actualizar", $"Servicio {serv.Nombre}");
                     }
                 }
             }
@@ -122,6 +125,7 @@ namespace MiSalud.Roles.Admin.Servicios
                 {
                     ctx.Servicios.Remove(serv);
                     ctx.SaveChanges();
+                    Utilidades.AuditoriaLogger.Registrar(Login.SelectorRoles.UsuarioActual, "Servicios", "Eliminar", $"Servicio {serv.Nombre}");
                 }
             }
 
