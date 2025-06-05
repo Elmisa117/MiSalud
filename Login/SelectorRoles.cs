@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Roles.Admin;
+using MiSalud.Roles.Admin;
 using Roles.Caja;
 using Roles.Doctor;
 using Roles.Enfermeria;

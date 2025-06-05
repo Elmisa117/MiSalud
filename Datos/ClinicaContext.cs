@@ -5,7 +5,10 @@ namespace MiSalud.Datos
 {
     public class ClinicaContext : DbContext
     {
+        // DbSet para las entidades de la base de datos
         public DbSet<Personal> Personal { get; set; }
+        // DbSet para la entidad Especialidad
+        public DbSet<Especialidad> Especialidades { get; set; }
 
         // Aquí puedes agregar otras tablas (DbSet)
         // public DbSet<Paciente> Pacientes { get; set; }
