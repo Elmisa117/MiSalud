@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using MiSalud.Datos;                        // Tu DbContext (ClinicaContext)
 using Entidades = MiSalud.Entidades;       // Alias para acceder a tus clases del namespace Entidades
+using MiSalud.Utilidades;
 
 namespace MiSalud.Roles.Admin.Personal
 {
@@ -189,7 +190,7 @@ namespace MiSalud.Roles.Admin.Personal
                             Rol = cbRol.Text,
                             EspecialidadId = Convert.ToInt32(cbEspecialidad.SelectedValue),
                             Usuario = txtUsuario.Text,
-                            Contrasena = txtContrasena.Text,
+                            Contrasena = Seguridad.HashPassword(txtContrasena.Text),
                             FechaCreacion = dtpCreacion.Value,
                             Estado = chkEstado.Checked
                         };
@@ -218,7 +219,10 @@ namespace MiSalud.Roles.Admin.Personal
                             personal.Rol = cbRol.Text;
                             personal.EspecialidadId = Convert.ToInt32(cbEspecialidad.SelectedValue);
                             personal.Usuario = txtUsuario.Text;
-                            personal.Contrasena = txtContrasena.Text;
+                            if (!string.IsNullOrWhiteSpace(txtContrasena.Text))
+                            {
+                                personal.Contrasena = Seguridad.HashPassword(txtContrasena.Text);
+                            }
                             personal.FechaCreacion = dtpCreacion.Value;
                             personal.Estado = chkEstado.Checked;
 
