@@ -50,17 +50,17 @@ namespace MiSalud.Roles.Admin
             // Botones con estilo clínico moderno
             // 
             string[] nombres = {
-                "btnPersonal", "btnEspecialidades", "btnServicios", "btnConsultas", "btnHospitalizaciones",
+                "btnPersonal", "btnUsuarios", "btnEspecialidades", "btnServicios", "btnConsultas", "btnHospitalizaciones",
                 "btnFacturacion", "btnPlanesPago", "btnFichasClinicas", "btnReportes", "btnConfiguracion", "btnCerrarSesion"
             };
 
             string[] textos = {
-                "Gestión Personal", "Especialidades", "Servicios", "Consultas", "Hospitalizaciones",
+                "Gestión Personal", "Usuarios", "Especialidades", "Servicios", "Consultas", "Hospitalizaciones",
                 "Facturación", "Planes de Pago", "Fichas Clínicas", "Reportes", "Configuración", "Cerrar Sesión"
             };
 
             EventHandler[] eventos = {
-                btnPersonal_Click, btnEspecialidades_Click, btnServicios_Click, btnConsultas_Click, btnHospitalizaciones_Click,
+                btnPersonal_Click, btnUsuarios_Click, btnEspecialidades_Click, btnServicios_Click, btnConsultas_Click, btnHospitalizaciones_Click,
                 btnFacturacion_Click, btnPlanesPago_Click, btnFichasClinicas_Click, btnReportes_Click, btnConfiguracion_Click, btnCerrarSesion_Click
             };
 
